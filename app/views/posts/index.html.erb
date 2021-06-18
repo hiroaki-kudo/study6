@@ -3,12 +3,12 @@
   <tr>
     <th>内容</th>
   </tr>
-<% @posts.each do |post| %>
+  <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
     <td><%= link_to "編集する", edit_post_path(post.id) %></td>
     <td><%= link_to '削除する', post_path(post.id), method: :delete %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 <%= link_to '新しく投稿する', new_post_path %>
